@@ -786,7 +786,7 @@ InstructionQueue::scheduleReadyInsts()
         DynInstPtr issuing_inst = readyInsts[op_class].top();
 
         if (issuing_inst->isMagic()) {
-            DPRINTF(IQ, "Magic instruction is in the issue stage.");
+            printf("Magic instruction is in the issue stage.\n");
         }
 
         if (issuing_inst->isFloating()) {

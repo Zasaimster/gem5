@@ -657,7 +657,7 @@ Decode::decodeInsts(ThreadID tid)
                 "PC %s\n", tid, inst->seqNum, inst->pcState());
         
         if (inst->isMagic()) {
-            DPRINTF(Decode, "Magic instruction is the decode stage");
+            printf("Magic instruction is in the decode stage\n");
         }
 
         if (inst->isSquashed()) {

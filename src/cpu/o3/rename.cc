@@ -610,7 +610,7 @@ Rename::renameInsts(ThreadID tid)
         //inflight stores
 
         if (inst->isMagic()) {
-            DPRINTF(Rename, "Magic instruction is the rename stage");
+            printf("Magic instruction is the rename stage.\n");
         }
 
         if (inst->isLoad()) {

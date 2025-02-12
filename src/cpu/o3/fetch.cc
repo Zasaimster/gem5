@@ -1067,10 +1067,7 @@ Fetch::buildInst(ThreadID tid, StaticInstPtr staticInst,
     delayedCommit[tid] = instruction->isDelayedCommit();
 
     if (instruction->isMagic()) {
-        printf("Magic instruction is in the fetch stage");
-        DPRINTF(Fetch, "Magic instruction is in the fetch stage [DPRINTF]");
-    } else {
-        DPRINTF(Fetch, "This is not a magic instruction...");
+        printf("Magic instruction is in the fetch stage\n");
     }
 
     return instruction;
