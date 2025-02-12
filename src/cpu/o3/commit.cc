@@ -1110,6 +1110,10 @@ Commit::commitHead(const DynInstPtr &head_inst, unsigned inst_num)
 {
     assert(head_inst);
 
+    if (head_inst->isMagic()) {
+        DPRINTF(Commit, "Magic instruction is the commit stage");
+    }
+
     ThreadID tid = head_inst->threadNumber;
 
     // If the instruction is not executed yet, then it will need extra

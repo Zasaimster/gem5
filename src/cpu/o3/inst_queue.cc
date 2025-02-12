@@ -785,6 +785,10 @@ InstructionQueue::scheduleReadyInsts()
 
         DynInstPtr issuing_inst = readyInsts[op_class].top();
 
+        if (issuing_inst->isMagic()) {
+            DPRINTF(IQ, "Magic instruction is in the issue stage.");
+        }
+
         if (issuing_inst->isFloating()) {
             iqIOStats.fpInstQueueReads++;
         } else if (issuing_inst->isVector()) {
